@@ -1,2 +1,2 @@
-# YourrPaper
+# YourPaper
 Wallpapers library 
