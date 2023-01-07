@@ -8,3 +8,5 @@ C:\Users\georg\Code\YourPaper\YourPaper Desktop\bin\Debug\YourPaper Desktop.exe
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\bin\Debug\YourPaper Desktop.pdb
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.exe
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.pdb
+C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Browse.resources
+C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Walpaper.resources
