@@ -50,7 +50,8 @@ namespace YourPaper_Desktop
 
                 connection.Close();
 
-                MessageBox.Show("Sucsess!");
+                (new Browse()).Show();
+                this.Hide();
             }
             catch (SqlException ex)
             {
