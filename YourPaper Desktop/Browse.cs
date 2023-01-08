@@ -22,6 +22,7 @@ namespace YourPaper_Desktop
 
         List<Image> imgListImages = new List<Image>();
         int CurrentImage;
+        MemoryStream CurrentImageStream;
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
@@ -40,9 +41,9 @@ namespace YourPaper_Desktop
                     connection.Open();
                     SqlCommand binaryData = new SqlCommand("select Image from Wallpapers where ID=" + i + ";", connection);// use your code to retrive image from database and store it into 'object' data type
                     byte[] bytes = (byte[])binaryData.ExecuteScalar();
-                    MemoryStream ms = new MemoryStream(bytes);
+                    CurrentImageStream = new MemoryStream(bytes);
 
-                    imgListImages.Add(Image.FromStream(ms));
+                    imgListImages.Add(Image.FromStream(CurrentImageStream));
                     if (i == 1)
                     {
                         picImage.Image = imgListImages[0];
@@ -78,6 +79,10 @@ namespace YourPaper_Desktop
             {
                 CurrentImage++;
             }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {            
         }
     }
 }
