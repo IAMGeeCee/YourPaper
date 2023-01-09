@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,15 +21,10 @@ namespace YourPaper_Desktop
             InitializeComponent();
         }
 
+        #region Database
         List<Image> imgListImages = new List<Image>();
         int CurrentImage;
         MemoryStream CurrentImageStream;
-
-        private void btnUpload_Click(object sender, EventArgs e)
-        {
-            (new Upload()).Show();
-            this.Hide();
-        }
 
         private void Browse_Load(object sender, EventArgs e)
         {
@@ -53,6 +49,83 @@ namespace YourPaper_Desktop
             catch (ArgumentNullException)
             {
             }
+        }
+        #endregion
+
+        #region TitleBar
+        //Buttons
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.FromArgb(232, 17, 35);
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
+        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TitleButton_MouseHover(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.FromArgb(53, 53, 53);
+        }
+
+        private void TitleButton_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.Transparent;
+        }
+
+        private void btnMaximise_Click(object sender, EventArgs e)
+        {
+            if (WindowState != FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnMinimise_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+        #endregion
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            (new Upload()).Show();
+            this.Hide();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -81,8 +154,6 @@ namespace YourPaper_Desktop
             }
         }
 
-        private void btnDownload_Click(object sender, EventArgs e)
-        {            
-        }
+
     }
 }
