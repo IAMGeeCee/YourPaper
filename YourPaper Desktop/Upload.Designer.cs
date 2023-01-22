@@ -29,6 +29,7 @@ namespace YourPaper_Desktop
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Upload));
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.pnlForm = new System.Windows.Forms.Panel();
             this.btnUpload = new System.Windows.Forms.Button();
@@ -224,12 +225,11 @@ namespace YourPaper_Desktop
             this.btnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximise.ForeColor = System.Drawing.Color.White;
-            this.btnMaximise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaximise.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximise.Image")));
             this.btnMaximise.Location = new System.Drawing.Point(661, -1);
             this.btnMaximise.Name = "btnMaximise";
             this.btnMaximise.Size = new System.Drawing.Size(49, 34);
             this.btnMaximise.TabIndex = 3;
-            this.btnMaximise.Text = "";
             this.btnMaximise.UseVisualStyleBackColor = false;
             this.btnMaximise.Click += new System.EventHandler(this.btnMaximise_Click);
             this.btnMaximise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
