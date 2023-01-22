@@ -18,7 +18,8 @@ namespace YourPaper_Desktop
     {
         public Browse()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         #region Database
@@ -124,8 +125,11 @@ namespace YourPaper_Desktop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            (new Upload()).Show();
-            this.Hide();
+            Upload upload = new Upload();
+            upload.Location = Location;
+            upload.StartPosition = FormStartPosition.CenterScreen;
+            upload.WindowState = FormWindowState.Normal;
+            upload.Show();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -154,6 +158,12 @@ namespace YourPaper_Desktop
             }
         }
 
+        private void Search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
 
+            }
+        }
     }
 }

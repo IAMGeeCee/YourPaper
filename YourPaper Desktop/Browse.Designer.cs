@@ -32,15 +32,15 @@ namespace YourPaper_Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browse));
             this.btnUpload = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.Search = new System.Windows.Forms.TextBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnMinimise = new System.Windows.Forms.Button();
+            this.btnMaximise = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
-            this.btnMaximise = new System.Windows.Forms.Button();
-            this.btnMinimise = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.Search = new System.Windows.Forms.TextBox();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,74 @@ namespace YourPaper_Desktop
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            // 
+            // Search
+            // 
+            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Search.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.Search.ForeColor = System.Drawing.Color.White;
+            this.Search.Location = new System.Drawing.Point(139, 48);
+            this.Search.MinimumSize = new System.Drawing.Size(690, 36);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(714, 35);
+            this.Search.TabIndex = 6;
+            this.Search.Text = " Search";
+            this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Search_KeyDown);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(8, 8);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(61, 15);
+            this.lblTitle.TabIndex = 5;
+            this.lblTitle.Text = "YourPaper";
+            // 
+            // btnMinimise
+            // 
+            this.btnMinimise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimise.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimise.FlatAppearance.BorderSize = 0;
+            this.btnMinimise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimise.ForeColor = System.Drawing.Color.White;
+            this.btnMinimise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimise.Location = new System.Drawing.Point(840, -1);
+            this.btnMinimise.Name = "btnMinimise";
+            this.btnMinimise.Size = new System.Drawing.Size(49, 34);
+            this.btnMinimise.TabIndex = 4;
+            this.btnMinimise.Text = "";
+            this.btnMinimise.UseVisualStyleBackColor = false;
+            this.btnMinimise.Click += new System.EventHandler(this.btnMinimise_Click);
+            this.btnMinimise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
+            this.btnMinimise.MouseLeave += new System.EventHandler(this.TitleButton_MouseLeave);
+            this.btnMinimise.MouseHover += new System.EventHandler(this.TitleButton_MouseHover);
+            // 
+            // btnMaximise
+            // 
+            this.btnMaximise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximise.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximise.FlatAppearance.BorderSize = 0;
+            this.btnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximise.ForeColor = System.Drawing.Color.White;
+            this.btnMaximise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaximise.Location = new System.Drawing.Point(889, -1);
+            this.btnMaximise.Name = "btnMaximise";
+            this.btnMaximise.Size = new System.Drawing.Size(49, 34);
+            this.btnMaximise.TabIndex = 3;
+            this.btnMaximise.Text = "";
+            this.btnMaximise.UseVisualStyleBackColor = false;
+            this.btnMaximise.Click += new System.EventHandler(this.btnMaximise_Click);
+            this.btnMaximise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
+            this.btnMaximise.MouseLeave += new System.EventHandler(this.TitleButton_MouseLeave);
+            this.btnMaximise.MouseHover += new System.EventHandler(this.TitleButton_MouseHover);
             // 
             // btnClose
             // 
@@ -151,73 +219,6 @@ namespace YourPaper_Desktop
             this.pnlBack.Size = new System.Drawing.Size(988, 560);
             this.pnlBack.TabIndex = 7;
             // 
-            // btnMaximise
-            // 
-            this.btnMaximise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximise.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximise.FlatAppearance.BorderSize = 0;
-            this.btnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaximise.ForeColor = System.Drawing.Color.White;
-            this.btnMaximise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMaximise.Location = new System.Drawing.Point(889, -1);
-            this.btnMaximise.Name = "btnMaximise";
-            this.btnMaximise.Size = new System.Drawing.Size(49, 34);
-            this.btnMaximise.TabIndex = 3;
-            this.btnMaximise.Text = "";
-            this.btnMaximise.UseVisualStyleBackColor = false;
-            this.btnMaximise.Click += new System.EventHandler(this.btnMaximise_Click);
-            this.btnMaximise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
-            this.btnMaximise.MouseLeave += new System.EventHandler(this.TitleButton_MouseLeave);
-            this.btnMaximise.MouseHover += new System.EventHandler(this.TitleButton_MouseHover);
-            // 
-            // btnMinimise
-            // 
-            this.btnMinimise.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimise.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimise.FlatAppearance.BorderSize = 0;
-            this.btnMinimise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimise.ForeColor = System.Drawing.Color.White;
-            this.btnMinimise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnMinimise.Location = new System.Drawing.Point(840, -1);
-            this.btnMinimise.Name = "btnMinimise";
-            this.btnMinimise.Size = new System.Drawing.Size(49, 34);
-            this.btnMinimise.TabIndex = 4;
-            this.btnMinimise.Text = "";
-            this.btnMinimise.UseVisualStyleBackColor = false;
-            this.btnMinimise.Click += new System.EventHandler(this.btnMinimise_Click);
-            this.btnMinimise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
-            this.btnMinimise.MouseLeave += new System.EventHandler(this.TitleButton_MouseLeave);
-            this.btnMinimise.MouseHover += new System.EventHandler(this.TitleButton_MouseHover);
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(8, 8);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(61, 15);
-            this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "YourPaper";
-            // 
-            // Search
-            // 
-            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(139, 48);
-            this.Search.MinimumSize = new System.Drawing.Size(690, 36);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(714, 36);
-            this.Search.TabIndex = 6;
-            this.Search.Text = " Search";
-            this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Browse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +235,7 @@ namespace YourPaper_Desktop
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Browse";
             this.Text = "Browse";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Browse_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();

@@ -1,11 +1,12 @@
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\bin\Debug\YourPaper Desktop.exe.config
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\bin\Debug\YourPaper Desktop.exe
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\bin\Debug\YourPaper Desktop.pdb
-C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Browse.resources
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Properties.Resources.resources
-C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Upload.resources
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.csproj.GenerateResource.cache
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.csproj.CoreCompileInputs.cache
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.exe
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.pdb
 C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.csproj.AssemblyReference.cache
+C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Browse.resources
+C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Upload.resources
+C:\Users\georg\Code\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.csproj.SuggestedBindingRedirects.cache
