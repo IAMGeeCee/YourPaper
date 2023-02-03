@@ -115,12 +115,11 @@ namespace YourPaper_Desktop
             this.btnMinimise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimise.ForeColor = System.Drawing.Color.White;
-            this.btnMinimise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMinimise.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimise.Image")));
             this.btnMinimise.Location = new System.Drawing.Point(840, -1);
             this.btnMinimise.Name = "btnMinimise";
             this.btnMinimise.Size = new System.Drawing.Size(49, 34);
             this.btnMinimise.TabIndex = 4;
-            this.btnMinimise.Text = "";
             this.btnMinimise.UseVisualStyleBackColor = false;
             this.btnMinimise.Click += new System.EventHandler(this.btnMinimise_Click);
             this.btnMinimise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);
@@ -135,12 +134,11 @@ namespace YourPaper_Desktop
             this.btnMaximise.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximise.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximise.ForeColor = System.Drawing.Color.White;
-            this.btnMaximise.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnMaximise.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximise.Image")));
             this.btnMaximise.Location = new System.Drawing.Point(889, -1);
             this.btnMaximise.Name = "btnMaximise";
             this.btnMaximise.Size = new System.Drawing.Size(49, 34);
             this.btnMaximise.TabIndex = 3;
-            this.btnMaximise.Text = "";
             this.btnMaximise.UseVisualStyleBackColor = false;
             this.btnMaximise.Click += new System.EventHandler(this.btnMaximise_Click);
             this.btnMaximise.MouseEnter += new System.EventHandler(this.TitleButton_MouseHover);

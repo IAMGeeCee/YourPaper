@@ -89,7 +89,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\arrow-left.png" />
+    <Content Include="Assets\arrow-right.png" />
     <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\download.png" />
+    <Content Include="Assets\HomeBack.jpg" />
+    <Content Include="Assets\HomeBackTrimmed.jpg" />
+    <Content Include="Assets\square-minus.png" />
+    <Content Include="Assets\square.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
