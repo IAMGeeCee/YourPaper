@@ -50,10 +50,11 @@ namespace YourPaper_Desktop
             this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpload.BackColor = System.Drawing.Color.Transparent;
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(859, 48);
+            this.btnUpload.Location = new System.Drawing.Point(862, 48);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(122, 36);
+            this.btnUpload.Size = new System.Drawing.Size(116, 36);
             this.btnUpload.TabIndex = 0;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = false;
@@ -85,14 +86,14 @@ namespace YourPaper_Desktop
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
             this.Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.Search.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
             this.Search.Location = new System.Drawing.Point(139, 48);
             this.Search.MinimumSize = new System.Drawing.Size(690, 36);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(714, 35);
+            this.Search.Size = new System.Drawing.Size(714, 36);
             this.Search.TabIndex = 6;
-            this.Search.Text = " Search";
+            this.Search.Text = "Type to search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Search_KeyDown);
             // 
@@ -101,7 +102,7 @@ namespace YourPaper_Desktop
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(8, 8);
+            this.lblTitle.Location = new System.Drawing.Point(11, 11);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(61, 15);
             this.lblTitle.TabIndex = 5;
