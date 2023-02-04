@@ -41,8 +41,10 @@ namespace YourPaper_Desktop
             this.btnNext = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            this.pnlBack.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpload
@@ -211,12 +213,21 @@ namespace YourPaper_Desktop
             // pnlBack
             // 
             this.pnlBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBack.Controls.Add(this.flowLayoutPanel1);
             this.pnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlBack.Location = new System.Drawing.Point(0, 0);
             this.pnlBack.Name = "pnlBack";
             this.pnlBack.Size = new System.Drawing.Size(988, 560);
             this.pnlBack.TabIndex = 7;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 558);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Browse
             // 
@@ -240,6 +251,7 @@ namespace YourPaper_Desktop
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            this.pnlBack.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -257,5 +269,6 @@ namespace YourPaper_Desktop
         private System.Windows.Forms.Button btnMaximise;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox Search;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
