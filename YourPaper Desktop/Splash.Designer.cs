@@ -57,6 +57,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Splash";
+            this.ShowInTaskbar = false;
             this.Text = "Splash";
             this.Load += new System.EventHandler(this.Splash_Load);
             this.Shown += new System.EventHandler(this.Splash_Shown);
