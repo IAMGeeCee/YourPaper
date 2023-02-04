@@ -41,8 +41,10 @@ namespace YourPaper_Desktop
             this.btnNext = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
+            this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
+            this.pnlBack.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnUpload
@@ -211,12 +213,26 @@ namespace YourPaper_Desktop
             // pnlBack
             // 
             this.pnlBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlBack.Controls.Add(this.flpWallpapers);
             this.pnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlBack.Location = new System.Drawing.Point(0, 0);
             this.pnlBack.Name = "pnlBack";
             this.pnlBack.Size = new System.Drawing.Size(988, 560);
             this.pnlBack.TabIndex = 7;
+            // 
+            // flpWallpapers
+            // 
+            this.flpWallpapers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpWallpapers.AutoScroll = true;
+            this.flpWallpapers.BackColor = System.Drawing.Color.Transparent;
+            this.flpWallpapers.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpWallpapers.Location = new System.Drawing.Point(4, 103);
+            this.flpWallpapers.Name = "flpWallpapers";
+            this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
+            this.flpWallpapers.TabIndex = 0;
             // 
             // Browse
             // 
@@ -226,11 +242,11 @@ namespace YourPaper_Desktop
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 560);
+            this.Controls.Add(this.pnlTop);
+            this.Controls.Add(this.pnlBack);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.picImage);
-            this.Controls.Add(this.pnlTop);
-            this.Controls.Add(this.pnlBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browse";
@@ -240,6 +256,7 @@ namespace YourPaper_Desktop
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
+            this.pnlBack.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -257,5 +274,6 @@ namespace YourPaper_Desktop
         private System.Windows.Forms.Button btnMaximise;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox Search;
+        private System.Windows.Forms.FlowLayoutPanel flpWallpapers;
     }
 }

@@ -45,6 +45,14 @@ namespace YourPaper_Desktop
                     {
                         picImage.Image = imgListImages[0];
                     }
+
+                        PictureBox pictureBox = new PictureBox();
+                        pictureBox.Image = imgListImages[i-1];
+                        pictureBox.Height = 400;
+                        pictureBox.Width = 700;
+                        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                        flpWallpapers.Controls.Add(pictureBox);
+                    
                 }
             }
             catch (ArgumentNullException)
