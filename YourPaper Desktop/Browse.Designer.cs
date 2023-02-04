@@ -232,6 +232,7 @@ namespace YourPaper_Desktop
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browse";
             this.Text = "Browse";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
