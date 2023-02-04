@@ -16,7 +16,7 @@ namespace YourPaper_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Browse());
+            Application.Run(new Splash());
         }
     }
 }

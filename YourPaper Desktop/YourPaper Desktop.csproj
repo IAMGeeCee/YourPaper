@@ -104,8 +104,12 @@
     <Content Include="Assets\download.png" />
     <Content Include="Assets\HomeBack.jpg" />
     <Content Include="Assets\HomeBackTrimmed.jpg" />
+    <Content Include="Assets\minus-small.png" />
+    <Content Include="Assets\Splash.png" />
+    <Content Include="Assets\square-minus-white.png" />
     <Content Include="Assets\square-minus.png" />
     <Content Include="Assets\square.png" />
+    <Content Include="Assets\YourPaperLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

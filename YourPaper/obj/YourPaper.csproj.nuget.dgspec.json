@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\georg\\Code\\YourPaper\\YourPaper\\YourPaper.csproj": {}
+    "C:\\Users\\georg\\Code\\Main projects\\YourPaper\\YourPaper\\YourPaper.csproj": {}
   },
   "projects": {
-    "C:\\Users\\georg\\Code\\YourPaper\\YourPaper\\YourPaper.csproj": {
+    "C:\\Users\\georg\\Code\\Main projects\\YourPaper\\YourPaper\\YourPaper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\georg\\Code\\YourPaper\\YourPaper\\YourPaper.csproj",
+        "projectUniqueName": "C:\\Users\\georg\\Code\\Main projects\\YourPaper\\YourPaper\\YourPaper.csproj",
         "projectName": "YourPaper",
-        "projectPath": "C:\\Users\\georg\\Code\\YourPaper\\YourPaper\\YourPaper.csproj",
+        "projectPath": "C:\\Users\\georg\\Code\\Main projects\\YourPaper\\YourPaper\\YourPaper.csproj",
         "packagesPath": "C:\\Users\\georg\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\georg\\Code\\YourPaper\\YourPaper\\obj\\",
+        "outputPath": "C:\\Users\\georg\\Code\\Main projects\\YourPaper\\YourPaper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

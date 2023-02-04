@@ -34,3 +34,4 @@ C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPape
 C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.csproj.CoreCompileInputs.cache
 C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.exe
 C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper Desktop.pdb
+C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Splash.resources
