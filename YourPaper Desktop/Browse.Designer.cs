@@ -37,13 +37,9 @@ namespace YourPaper_Desktop
             this.btnMinimise = new System.Windows.Forms.Button();
             this.btnMaximise = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.pnlBack.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -167,53 +163,10 @@ namespace YourPaper_Desktop
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
-            // picImage
-            // 
-            this.picImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picImage.BackColor = System.Drawing.Color.Transparent;
-            this.picImage.Location = new System.Drawing.Point(140, 168);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(714, 360);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 4;
-            this.picImage.TabStop = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNext.BackColor = System.Drawing.Color.Transparent;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(860, 168);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 360);
-            this.btnNext.TabIndex = 5;
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnBack.BackColor = System.Drawing.Color.Transparent;
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(59, 168);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 360);
-            this.btnBack.TabIndex = 6;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // pnlBack
             // 
             this.pnlBack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlBack.Controls.Add(this.flowLayoutPanel1);
+            this.pnlBack.Controls.Add(this.flpWallpapers);
             this.pnlBack.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pnlBack.Location = new System.Drawing.Point(0, 0);
@@ -221,13 +174,17 @@ namespace YourPaper_Desktop
             this.pnlBack.Size = new System.Drawing.Size(988, 560);
             this.pnlBack.TabIndex = 7;
             // 
-            // flowLayoutPanel1
+            // flpWallpapers
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 558);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flpWallpapers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpWallpapers.AutoScroll = true;
+            this.flpWallpapers.BackColor = System.Drawing.Color.Transparent;
+            this.flpWallpapers.Location = new System.Drawing.Point(4, 103);
+            this.flpWallpapers.Name = "flpWallpapers";
+            this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
+            this.flpWallpapers.TabIndex = 0;
             // 
             // Browse
             // 
@@ -237,20 +194,15 @@ namespace YourPaper_Desktop
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 560);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.picImage);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browse";
             this.Text = "Browse";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Browse_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImage)).EndInit();
             this.pnlBack.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -260,15 +212,12 @@ namespace YourPaper_Desktop
 
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.PictureBox picImage;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlBack;
         private System.Windows.Forms.Button btnMinimise;
         private System.Windows.Forms.Button btnMaximise;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox Search;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flpWallpapers;
     }
 }

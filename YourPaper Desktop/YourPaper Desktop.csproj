@@ -55,6 +55,7 @@
     <Compile Include="Browse.Designer.cs">
       <DependentUpon>Browse.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Splash.cs">
