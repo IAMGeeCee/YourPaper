@@ -18,12 +18,12 @@ namespace YourPaper_Desktop
     {
         public Browse()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
         #region Database
-        List<Image> imgListImages = new List<Image>();
+        readonly List<Image> imgListImages = new List<Image>();
         int CurrentImage;
         MemoryStream CurrentImageStream;
 
@@ -38,7 +38,9 @@ namespace YourPaper_Desktop
                     connection.Open();
                     SqlCommand binaryData = new SqlCommand("select Image from Wallpapers where ID=" + i + ";", connection);// use your code to retrive image from database and store it into 'object' data type
                     byte[] bytes = (byte[])binaryData.ExecuteScalar();
+
                     CurrentImageStream = new MemoryStream(bytes);
+
 
                     imgListImages.Add(Image.FromStream(CurrentImageStream));
                     if (i == 1)
@@ -46,17 +48,21 @@ namespace YourPaper_Desktop
                         picImage.Image = imgListImages[0];
                     }
 
-                        PictureBox pictureBox = new PictureBox();
-                        pictureBox.Image = imgListImages[i-1];
-                        pictureBox.Height = 400;
-                        pictureBox.Width = 700;
-                        pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-                        flpWallpapers.Controls.Add(pictureBox);
-                    
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Image = imgListImages[i - 1],
+                        Height = 200,
+                        Width = 400,
+                        SizeMode = PictureBoxSizeMode.StretchImage
+                    };
+                    flpWallpapers.Controls.Add(pictureBox);
+                    connection.Close();
+
                 }
             }
             catch (ArgumentNullException)
             {
+
             }
         }
         #endregion
@@ -72,7 +78,7 @@ namespace YourPaper_Desktop
         {
             btnClose.BackColor = Color.Transparent;
         }
-        
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -133,10 +139,12 @@ namespace YourPaper_Desktop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            Upload upload = new Upload();
-            upload.Location = Location;
-            upload.StartPosition = FormStartPosition.CenterScreen;
-            upload.WindowState = FormWindowState.Normal;
+            Upload upload = new Upload()
+            {
+                Location = Location,
+                StartPosition = FormStartPosition.CenterScreen,
+                WindowState = FormWindowState.Normal
+            };
             upload.Show();
         }
 
@@ -168,7 +176,7 @@ namespace YourPaper_Desktop
 
         private void Search_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
 
             }

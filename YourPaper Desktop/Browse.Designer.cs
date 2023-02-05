@@ -228,7 +228,6 @@ namespace YourPaper_Desktop
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpWallpapers.AutoScroll = true;
             this.flpWallpapers.BackColor = System.Drawing.Color.Transparent;
-            this.flpWallpapers.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpWallpapers.Location = new System.Drawing.Point(4, 103);
             this.flpWallpapers.Name = "flpWallpapers";
             this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
@@ -251,7 +250,6 @@ namespace YourPaper_Desktop
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Browse";
             this.Text = "Browse";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Browse_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
