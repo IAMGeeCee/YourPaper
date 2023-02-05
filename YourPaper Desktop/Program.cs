@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using YourPaper_Desktop.Properties;
 
 namespace YourPaper_Desktop
 {
@@ -16,7 +14,15 @@ namespace YourPaper_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash());
+
+            if (Settings.Default.IsFirstUse)
+            {
+                Application.Run(new Login());
+            }
+            else
+            {
+                Application.Run(new Splash());
+            }
         }
     }
 }
