@@ -43,10 +43,7 @@ namespace YourPaper_Desktop
 
 
                     imgListImages.Add(Image.FromStream(CurrentImageStream));
-                    if (i == 1)
-                    {
-                        picImage.Image = imgListImages[0];
-                    }
+                   
 
                     PictureBox pictureBox = new PictureBox()
                     {
@@ -146,32 +143,6 @@ namespace YourPaper_Desktop
                 WindowState = FormWindowState.Normal
             };
             upload.Show();
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CurrentImage++;
-                picImage.Image = imgListImages[CurrentImage];
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                CurrentImage--;
-            }
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CurrentImage--;
-                picImage.Image = imgListImages[CurrentImage];
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                CurrentImage++;
-            }
         }
 
         private void Search_KeyDown(object sender, KeyEventArgs e)
