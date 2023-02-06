@@ -32,12 +32,12 @@
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlMainPage = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGo = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPasswords = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlTop.SuspendLayout();
             this.pnlMainPage.SuspendLayout();
@@ -77,12 +77,12 @@
             // 
             this.pnlMainPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMainPage.BackgroundImage")));
             this.pnlMainPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMainPage.Controls.Add(this.button1);
+            this.pnlMainPage.Controls.Add(this.btnGo);
             this.pnlMainPage.Controls.Add(this.label3);
             this.pnlMainPage.Controls.Add(this.label2);
-            this.pnlMainPage.Controls.Add(this.textBox2);
+            this.pnlMainPage.Controls.Add(this.txtPasswords);
             this.pnlMainPage.Controls.Add(this.label1);
-            this.pnlMainPage.Controls.Add(this.textBox1);
+            this.pnlMainPage.Controls.Add(this.txtEmail);
             this.pnlMainPage.Controls.Add(this.lblTitle);
             this.pnlMainPage.Controls.Add(this.pnlTop);
             this.pnlMainPage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -91,18 +91,19 @@
             this.pnlMainPage.Size = new System.Drawing.Size(366, 545);
             this.pnlMainPage.TabIndex = 5;
             // 
-            // button1
+            // btnGo
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(21, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(295, 35);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Lets Go!  ";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnGo.BackColor = System.Drawing.Color.Transparent;
+            this.btnGo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGo.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGo.ForeColor = System.Drawing.Color.White;
+            this.btnGo.Location = new System.Drawing.Point(21, 193);
+            this.btnGo.Name = "btnGo";
+            this.btnGo.Size = new System.Drawing.Size(295, 35);
+            this.btnGo.TabIndex = 11;
+            this.btnGo.Text = "Lets Go!  ";
+            this.btnGo.UseVisualStyleBackColor = false;
+            this.btnGo.Click += new System.EventHandler(this.btnGo_Click);
             // 
             // label3
             // 
@@ -129,12 +130,12 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Password: ";
             // 
-            // textBox2
+            // txtPasswords
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 20);
-            this.textBox2.TabIndex = 8;
+            this.txtPasswords.Location = new System.Drawing.Point(98, 158);
+            this.txtPasswords.Name = "txtPasswords";
+            this.txtPasswords.Size = new System.Drawing.Size(218, 20);
+            this.txtPasswords.TabIndex = 8;
             // 
             // label1
             // 
@@ -148,12 +149,12 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Email: ";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(218, 20);
-            this.textBox1.TabIndex = 6;
+            this.txtEmail.Location = new System.Drawing.Point(98, 118);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(218, 20);
+            this.txtEmail.TabIndex = 6;
             // 
             // lblTitle
             // 
@@ -191,12 +192,12 @@
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel pnlMainPage;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPasswords;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblTitle;
     }
 }
