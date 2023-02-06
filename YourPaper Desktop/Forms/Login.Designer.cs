@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlMainPage = new System.Windows.Forms.Panel();
@@ -63,14 +64,18 @@
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(317, -1);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(49, 37);
+            this.btnClose.Size = new System.Drawing.Size(49, 38);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseHover);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // pnlMainPage
             // 
+            this.pnlMainPage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnlMainPage.BackgroundImage")));
             this.pnlMainPage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMainPage.Controls.Add(this.button1);
             this.pnlMainPage.Controls.Add(this.label3);
@@ -89,6 +94,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(42, 40);
@@ -107,6 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(45, 117);
@@ -118,6 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(18, 158);
@@ -136,9 +144,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label3.Location = new System.Drawing.Point(18, 517);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(21, 517);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(307, 18);
             this.label3.TabIndex = 10;
@@ -146,6 +155,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -154,7 +164,7 @@
             this.button1.Size = new System.Drawing.Size(295, 35);
             this.button1.TabIndex = 11;
             this.button1.Text = "Lets Go!  ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Login
             // 
@@ -164,7 +174,9 @@
             this.ClientSize = new System.Drawing.Size(366, 545);
             this.Controls.Add(this.pnlMainPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.pnlTop.ResumeLayout(false);
             this.pnlMainPage.ResumeLayout(false);

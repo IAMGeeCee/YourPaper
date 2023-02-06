@@ -21,5 +21,15 @@ namespace YourPaper_Desktop
         {
             Application.Exit();
         }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Red;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.BackColor = Color.Transparent;
+        }
     }
 }
