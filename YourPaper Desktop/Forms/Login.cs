@@ -31,5 +31,11 @@ namespace YourPaper_Desktop
         {
             btnClose.BackColor = Color.Transparent;
         }
+
+        private void SignUp(object sender, EventArgs e)
+        {
+            (new SignUp()).Show();
+            Hide();
+        }
     }
 }

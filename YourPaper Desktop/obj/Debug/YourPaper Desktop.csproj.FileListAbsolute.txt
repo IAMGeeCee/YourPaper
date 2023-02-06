@@ -37,3 +37,4 @@ C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPape
 C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Splash.resources
 C:\Users\georg\Source\Repos\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Splash.resources
 C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.Login.resources
+C:\Users\georg\Code\Main projects\YourPaper\YourPaper Desktop\obj\Debug\YourPaper_Desktop.SignUp.resources

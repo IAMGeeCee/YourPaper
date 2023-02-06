@@ -91,6 +91,12 @@
     <Compile Include="Forms\Upload.Designer.cs">
       <DependentUpon>Upload.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Browse.resx">
       <DependentUpon>Browse.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +118,9 @@
     <EmbeddedResource Include="Forms\Upload.resx">
       <DependentUpon>Upload.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +135,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\angle-left %281%29.png" />
+    <Content Include="Assets\angle-left.png" />
     <Content Include="Assets\arrow-left.png" />
     <Content Include="Assets\arrow-right.png" />
     <Content Include="Assets\background.jpg" />
