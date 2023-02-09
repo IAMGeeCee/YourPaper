@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace YourPaper_Desktop
@@ -17,12 +18,10 @@ namespace YourPaper_Desktop
 
         #region Database
         readonly List<Image> imgListImages = new List<Image>();
-        int CurrentImage;
         MemoryStream CurrentImageStream;
 
         private void Browse_Load(object sender, EventArgs e)
         {
-            CurrentImage = 0;
             try
             {
                 for (int i = 1; i < 50; i++)
@@ -36,15 +35,19 @@ namespace YourPaper_Desktop
 
 
                     imgListImages.Add(Image.FromStream(CurrentImageStream));
-                   
+
 
                     PictureBox pictureBox = new PictureBox()
                     {
                         Image = imgListImages[i - 1],
                         Height = 200,
                         Width = 400,
-                        SizeMode = PictureBoxSizeMode.StretchImage
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+
                     };
+                    pictureBox.MouseEnter += PictureHover;
+                    pictureBox.MouseLeave += PictureMouseLeave;
+                    pictureBox.Click += PictureClick;
                     flpWallpapers.Controls.Add(pictureBox);
                     connection.Close();
 
@@ -143,6 +146,30 @@ namespace YourPaper_Desktop
             if (e.KeyCode == Keys.Enter)
             {
             }
+        }
+
+        public void PictureHover(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 20; i++)
+            {
+
+                ((Control)sender).Margin = new Padding(3, i, 3, 3);
+                ((Control)sender).Height++;
+            }
+        }
+
+        public void PictureMouseLeave(object sender, EventArgs e)
+        {
+
+            ((Control)sender).Margin = new Padding(3);
+
+            ((Control)sender).Height = 200;
+        }
+
+        public void PictureClick(object sender, EventArgs e)
+        {
+            Bitmap bitmap = new Bitmap(((PictureBox)sender).Image);
+            bitmap.Save("C:\\%USERNAME%\\Images\\YourPaperImage.bmp");
         }
     }
 }

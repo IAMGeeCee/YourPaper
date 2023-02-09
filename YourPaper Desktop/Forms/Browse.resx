@@ -121,18 +121,21 @@
   <data name="btnMinimise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        YAAAAGABh2xyWQAAAAd0SU1FB+cCAxIlOp69A18AAAAoSURBVDhPYxgFwxL8//+/G4hX4cBdUGW4AUgR
+        XgAAAF4B+NkP+QAAAAd0SU1FB+cCAxIlOp69A18AAAAoSURBVDhPYxgFwxL8//+/G4hX4cBdUGW4AUgR
         miZkTNiAUTD0AAMDAMVYOfKANG7OAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnMaximise.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        YAAAAGABh2xyWQAAAAd0SU1FB+cBFhELOrebaVcAAAB/SURBVDhP7ZNBCoAwDAT7yaInKf6o9WnW3wh1
+        XgAAAF4B+NkP+QAAAAd0SU1FB+cBFhELOrebaVcAAAB/SURBVDhP7ZNBCoAwDAT7yaInKf6o9WnW3wh1
         RyJ4a8SbuDAQluzSQxpQa20Wm9hFT+ywm+5hzCxGETuwUwSZRAFt+Wx7ICupDDQN5rulDC/ZGVA03y0y
         BP+CzxS8PiROuZjvljKLWBmS4BXctvczESYzXW2UVDN7YoddhUM4AMFPig1aKzvLAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="tmrAnimation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAAAGAAoyAAAFgAAACgAAACAAAAAAAEAAAEAGAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAA
