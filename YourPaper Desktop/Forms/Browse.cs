@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace YourPaper_Desktop
         public Browse()
         {
             InitializeComponent();
+            //Stops it going over the taskbar
             this.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size;
         }
 
@@ -22,6 +24,7 @@ namespace YourPaper_Desktop
 
         private void Browse_Load(object sender, EventArgs e)
         {
+            //Loads first 50 images
             try
             {
                 for (int i = 1; i < 50; i++)
@@ -132,6 +135,7 @@ namespace YourPaper_Desktop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            //Shows the upload form
             Upload upload = new Upload()
             {
                 Location = Location,
@@ -148,28 +152,30 @@ namespace YourPaper_Desktop
             }
         }
 
+
+        //These methods control the pictureboxes
         public void PictureHover(object sender, EventArgs e)
         {
-            for (int i = 0; i < 20; i++)
-            {
-
-                ((Control)sender).Margin = new Padding(3, i, 3, 3);
-                ((Control)sender).Height++;
-            }
+            //Gives it a border on hover
+            ((PictureBox)sender).BorderStyle = BorderStyle.FixedSingle;
         }
 
         public void PictureMouseLeave(object sender, EventArgs e)
         {
-
-            ((Control)sender).Margin = new Padding(3);
-
-            ((Control)sender).Height = 200;
+            //hides the border when hover is stopped
+            ((PictureBox)sender).BorderStyle = BorderStyle.None;
         }
 
         public void PictureClick(object sender, EventArgs e)
         {
-            Bitmap bitmap = new Bitmap(((PictureBox)sender).Image);
-            bitmap.Save("C:\\%USERNAME%\\Images\\YourPaperImage.bmp");
+            //Opens a save dialog and saves the image currently in the picture box
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Title = "Save";
+            saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                ((PictureBox)sender).Image.Save(saveFile.FileName,ImageFormat.Jpeg);
+            }
         }
     }
 }
