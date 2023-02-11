@@ -93,7 +93,7 @@ namespace YourPaper_Desktop
 
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
-
+            //Opens a file select dialog to choose file to upload
             ofdFileSelect.Multiselect = false;
             if (ofdFileSelect.ShowDialog() == DialogResult.OK)
             {
@@ -107,6 +107,7 @@ namespace YourPaper_Desktop
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
+            //Upload image
             try
             {
                 SqlConnection connection = new SqlConnection("Data Source=CLENCYHOME\\SQLEXPRESS;Initial Catalog=YourPaper;Integrated Security=True");

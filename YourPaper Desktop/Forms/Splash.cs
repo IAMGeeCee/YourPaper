@@ -26,12 +26,14 @@ namespace YourPaper_Desktop
 
         private  void Splash_Shown(object sender, EventArgs e)
         {
+            //Starts wait method on new thread
             Thread thr = new Thread(new ThreadStart(wait));
             thr.Start();
         }
 
         public void wait()
         {
+            //counts three seconds then closes this
             Thread.Sleep(3000);
             this.Invoke(new Action(delegate () { this.Hide(); }));
             this.Invoke(new Action(delegate () { (new Browse()).Show(); }));
