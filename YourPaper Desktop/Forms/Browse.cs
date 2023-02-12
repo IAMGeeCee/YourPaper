@@ -149,6 +149,47 @@ namespace YourPaper_Desktop
         {
             if (e.KeyCode == Keys.Enter)
             {
+                List<Image> DiscoveredImages = new List<Image>();
+
+                SqlConnection connection = new SqlConnection("Data Source=CLENCYHOME\\SQLEXPRESS;Initial Catalog=YourPaper;Integrated Security=True");
+                connection.Open();
+                SqlCommand GetNumOfRows = new SqlCommand("SELECT COUNT(*) FROM Wallpapers;", connection);
+                int intNumOfRows = (int)GetNumOfRows.ExecuteScalar();
+
+                for (int i = 1; i < intNumOfRows; i++)
+                {
+                    SqlCommand SearchCommand = new SqlCommand("Select Title From Wallpapers Where ID='" + i + "';",connection);
+                    if (SearchCommand.ExecuteScalar().ToString().Contains(Search.Text))
+                    {
+                        SqlCommand binaryData = new SqlCommand("select Image from Wallpapers where ID=" + i + ";", connection);// use your code to retrive image from database and store it into 'object' data type
+                        byte[] bytes = (byte[])binaryData.ExecuteScalar();
+
+                        CurrentImageStream = new MemoryStream(bytes);
+
+                        DiscoveredImages.Add(Image.FromStream(CurrentImageStream));
+                    }
+                }
+
+                flpWallpapers.Controls.Clear();
+
+                foreach(Image imgWallpaper in DiscoveredImages)
+                {
+
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Image = imgWallpaper,
+                        Height = 200,
+                        Width = 400,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+
+                    };
+                    pictureBox.MouseEnter += PictureHover;
+                    pictureBox.MouseLeave += PictureMouseLeave;
+                    pictureBox.Click += PictureClick;
+                    flpWallpapers.Controls.Add(pictureBox);
+                }
+
+                connection.Close();
 
             }
         }
@@ -175,7 +216,7 @@ namespace YourPaper_Desktop
             saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                ((PictureBox)sender).Image.Save(saveFile.FileName,ImageFormat.Jpeg);
+                ((PictureBox)sender).Image.Save(saveFile.FileName, ImageFormat.Jpeg);
             }
         }
     }
