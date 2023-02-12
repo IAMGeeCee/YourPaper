@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Permissions;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -22,8 +23,9 @@ namespace YourPaper_Desktop
         readonly List<Image> imgListImages = new List<Image>();
         MemoryStream CurrentImageStream;
 
-        private void Browse_Load(object sender, EventArgs e)
+        public void LoadImages()
         {
+            flpWallpapers.Controls.Clear();
             //Loads first 50 images
             try
             {
@@ -60,6 +62,11 @@ namespace YourPaper_Desktop
             {
 
             }
+        }
+
+        private void Browse_Load(object sender, EventArgs e)
+        {
+            LoadImages();
         }
         #endregion
 
@@ -145,15 +152,6 @@ namespace YourPaper_Desktop
             upload.Show();
         }
 
-        private void Search_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-
-            }
-        }
-
-
         //These methods control the pictureboxes
         public void PictureHover(object sender, EventArgs e)
         {
@@ -175,8 +173,68 @@ namespace YourPaper_Desktop
             saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
             if (saveFile.ShowDialog() == DialogResult.OK)
             {
-                ((PictureBox)sender).Image.Save(saveFile.FileName,ImageFormat.Jpeg);
+                ((PictureBox)sender).Image.Save(saveFile.FileName, ImageFormat.Jpeg);
             }
+        }
+
+        //Search
+        private void Search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<Image> DiscoveredImages = new List<Image>();
+
+                SqlConnection connection = new SqlConnection("Data Source=CLENCYHOME\\SQLEXPRESS;Initial Catalog=YourPaper;Integrated Security=True");
+                connection.Open();
+
+                //Counts rows in database
+                SqlCommand GetNumOfRows = new SqlCommand("SELECT COUNT(*) FROM Wallpapers;", connection);
+                int intNumOfRows = (int)GetNumOfRows.ExecuteScalar();
+
+                for (int i = 1; i < intNumOfRows; i++)
+                {
+                    //Checks if it has the search query in the title
+                    SqlCommand SearchCommand = new SqlCommand("Select Title From Wallpapers Where ID='" + i + "';", connection);
+                    if (SearchCommand.ExecuteScalar().ToString().Contains(Search.Text))
+                    {
+                        //if it is then it adds it
+                        SqlCommand binaryData = new SqlCommand("select Image from Wallpapers where ID=" + i + ";", connection);// use your code to retrive image from database and store it into 'object' data type
+                        byte[] bytes = (byte[])binaryData.ExecuteScalar();
+
+                        CurrentImageStream = new MemoryStream(bytes);
+
+                        DiscoveredImages.Add(Image.FromStream(CurrentImageStream));
+                    }
+                }
+
+                flpWallpapers.Controls.Clear();
+
+                foreach (Image imgWallpaper in DiscoveredImages)
+                {
+
+                    PictureBox pictureBox = new PictureBox()
+                    {
+                        Image = imgWallpaper,
+                        Height = 200,
+                        Width = 400,
+                        SizeMode = PictureBoxSizeMode.StretchImage,
+
+                    };
+                    pictureBox.MouseEnter += PictureHover;
+                    pictureBox.MouseLeave += PictureMouseLeave;
+                    pictureBox.Click += PictureClick;
+                    flpWallpapers.Controls.Add(pictureBox);
+                }
+
+                connection.Close();
+
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            LoadImages();
+            Search.Text = "Type to search";
         }
     }
 }

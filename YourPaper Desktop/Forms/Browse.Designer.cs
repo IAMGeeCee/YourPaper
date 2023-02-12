@@ -39,6 +39,7 @@ namespace YourPaper_Desktop
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
             this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlBack.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,7 @@ namespace YourPaper_Desktop
             this.pnlTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.pnlTop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTop.Controls.Add(this.btnClear);
             this.pnlTop.Controls.Add(this.Search);
             this.pnlTop.Controls.Add(this.lblTitle);
             this.pnlTop.Controls.Add(this.btnMinimise);
@@ -86,10 +88,10 @@ namespace YourPaper_Desktop
             this.Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Search.Font = new System.Drawing.Font("Bahnschrift SemiBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Location = new System.Drawing.Point(139, 48);
+            this.Search.Location = new System.Drawing.Point(122, 48);
             this.Search.MinimumSize = new System.Drawing.Size(690, 36);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(714, 36);
+            this.Search.Size = new System.Drawing.Size(690, 36);
             this.Search.TabIndex = 6;
             this.Search.Text = "Type to search";
             this.Search.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -186,6 +188,21 @@ namespace YourPaper_Desktop
             this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
             this.flpWallpapers.TabIndex = 0;
             // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(812, 48);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(35, 36);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "X";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Browse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,5 +236,6 @@ namespace YourPaper_Desktop
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox Search;
         private System.Windows.Forms.FlowLayoutPanel flpWallpapers;
+        private System.Windows.Forms.Button btnClear;
     }
 }
