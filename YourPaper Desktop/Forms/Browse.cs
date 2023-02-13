@@ -48,6 +48,7 @@ namespace YourPaper_Desktop
                         Height = 200,
                         Width = 400,
                         SizeMode = PictureBoxSizeMode.StretchImage,
+                        Tag = (new SqlCommand("SELECT Title FROM Wallpapers WHERE ID='"+i+"';",connection)).ExecuteScalar().ToString() + "|" + (new SqlCommand("SELECT Description FROM Wallpapers WHERE ID='" + i + "';", connection)).ExecuteScalar().ToString(),
 
                     };
                     pictureBox.MouseEnter += PictureHover;
@@ -168,13 +169,19 @@ namespace YourPaper_Desktop
         public void PictureClick(object sender, EventArgs e)
         {
             //Opens a save dialog and saves the image currently in the picture box
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.Title = "Save";
-            saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
-            if (saveFile.ShowDialog() == DialogResult.OK)
-            {
-                ((PictureBox)sender).Image.Save(saveFile.FileName, ImageFormat.Jpeg);
-            }
+            //SaveFileDialog saveFile = new SaveFileDialog();
+            //saveFile.Title = "Save";
+            //saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
+            //if (saveFile.ShowDialog() == DialogResult.OK)
+            //{
+            //    ((PictureBox)sender).Image.Save(saveFile.FileName, ImageFormat.Jpeg);
+            //}
+
+            picImage.Image = ((PictureBox)sender).Image;
+            lblImgTitle.Text = ((PictureBox)sender).Tag.ToString().Split('|')[0];
+            lblDescription.Text = ((PictureBox)sender).Tag.ToString().Split('|')[1];
+            pnlImage.Visible = true;
+            pnlImage.BringToFront();
         }
 
         //Search
@@ -182,6 +189,9 @@ namespace YourPaper_Desktop
         {
             if (e.KeyCode == Keys.Enter)
             {
+                pnlImage.Visible = false;
+                pnlImage.SendToBack();
+
                 List<Image> DiscoveredImages = new List<Image>();
 
                 SqlConnection connection = new SqlConnection("Data Source=CLENCYHOME\\SQLEXPRESS;Initial Catalog=YourPaper;Integrated Security=True");
@@ -235,6 +245,27 @@ namespace YourPaper_Desktop
         {
             LoadImages();
             Search.Text = "Type to search";
+        }
+
+
+        //Image selected
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+            //Opens a save dialog and saves the image currently in the picture box
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.Title = "Save";
+            saveFile.Filter = "Jpeg image(*.jpeg)|*.jpeg";
+            if (saveFile.ShowDialog() == DialogResult.OK)
+            {
+                picImage.Image.Save(saveFile.FileName, ImageFormat.Jpeg);
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlImage.Visible = false;
+            pnlImage.SendToBack();
         }
     }
 }
