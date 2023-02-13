@@ -4,8 +4,6 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Security.Permissions;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace YourPaper_Desktop
@@ -48,7 +46,7 @@ namespace YourPaper_Desktop
                         Height = 200,
                         Width = 400,
                         SizeMode = PictureBoxSizeMode.StretchImage,
-                        Tag = (new SqlCommand("SELECT Title FROM Wallpapers WHERE ID='"+i+"';",connection)).ExecuteScalar().ToString() + "|" + (new SqlCommand("SELECT Description FROM Wallpapers WHERE ID='" + i + "';", connection)).ExecuteScalar().ToString(),
+                        Tag = (new SqlCommand("SELECT Title FROM Wallpapers WHERE ID='" + i + "';", connection)).ExecuteScalar().ToString() + "|" + (new SqlCommand("SELECT Description FROM Wallpapers WHERE ID='" + i + "';", connection)).ExecuteScalar().ToString(),
 
                     };
                     pictureBox.MouseEnter += PictureHover;
@@ -238,6 +236,8 @@ namespace YourPaper_Desktop
 
                 connection.Close();
 
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
