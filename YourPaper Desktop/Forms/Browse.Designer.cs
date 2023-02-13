@@ -32,6 +32,7 @@ namespace YourPaper_Desktop
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Browse));
             this.btnUpload = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.Search = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnMinimise = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@ namespace YourPaper_Desktop
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
             this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnClear = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlBack.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,21 @@ namespace YourPaper_Desktop
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.pnlTop.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(812, 48);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(35, 36);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "X";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Search
             // 
@@ -187,21 +202,6 @@ namespace YourPaper_Desktop
             this.flpWallpapers.Name = "flpWallpapers";
             this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
             this.flpWallpapers.TabIndex = 0;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Bahnschrift SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(812, 48);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(35, 36);
-            this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "X";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Browse
             // 
