@@ -121,7 +121,6 @@ namespace YourPaper_Desktop
 
                 connection.Close();
 
-                (new Browse()).Show();
                 this.Hide();
             }
             catch (SqlException ex)

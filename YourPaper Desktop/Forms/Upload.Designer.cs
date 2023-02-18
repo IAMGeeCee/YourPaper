@@ -38,13 +38,13 @@ namespace YourPaper_Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ofdFileSelect = new System.Windows.Forms.OpenFileDialog();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnMinimise = new System.Windows.Forms.Button();
             this.btnMaximise = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgImage)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -55,9 +55,10 @@ namespace YourPaper_Desktop
             this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTitle.Location = new System.Drawing.Point(116, 107);
+            this.txtTitle.Location = new System.Drawing.Point(171, 107);
+            this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(522, 20);
+            this.txtTitle.Size = new System.Drawing.Size(467, 25);
             this.txtTitle.TabIndex = 0;
             // 
             // pnlForm
@@ -85,9 +86,12 @@ namespace YourPaper_Desktop
             // 
             this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpload.Location = new System.Drawing.Point(116, 452);
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(3, 427);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(522, 23);
+            this.btnUpload.Size = new System.Drawing.Size(752, 55);
             this.btnUpload.TabIndex = 7;
             this.btnUpload.Text = "Upload!";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -97,9 +101,12 @@ namespace YourPaper_Desktop
             // 
             this.btnSelectImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSelectImage.Location = new System.Drawing.Point(116, 247);
+            this.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelectImage.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectImage.ForeColor = System.Drawing.Color.White;
+            this.btnSelectImage.Location = new System.Drawing.Point(171, 210);
             this.btnSelectImage.Name = "btnSelectImage";
-            this.btnSelectImage.Size = new System.Drawing.Size(522, 23);
+            this.btnSelectImage.Size = new System.Drawing.Size(467, 29);
             this.btnSelectImage.TabIndex = 6;
             this.btnSelectImage.Text = "Select Image";
             this.btnSelectImage.UseVisualStyleBackColor = true;
@@ -109,9 +116,9 @@ namespace YourPaper_Desktop
             // 
             this.imgImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgImage.Location = new System.Drawing.Point(116, 276);
+            this.imgImage.Location = new System.Drawing.Point(171, 245);
             this.imgImage.Name = "imgImage";
-            this.imgImage.Size = new System.Drawing.Size(522, 169);
+            this.imgImage.Size = new System.Drawing.Size(467, 169);
             this.imgImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgImage.TabIndex = 5;
             this.imgImage.TabStop = false;
@@ -120,11 +127,11 @@ namespace YourPaper_Desktop
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(318, 139);
+            this.label3.Location = new System.Drawing.Point(56, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 30);
+            this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Description:";
             // 
@@ -133,34 +140,23 @@ namespace YourPaper_Desktop
             this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescription.Location = new System.Drawing.Point(116, 172);
+            this.txtDescription.Location = new System.Drawing.Point(171, 165);
+            this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(522, 20);
+            this.txtDescription.Size = new System.Drawing.Size(467, 25);
             this.txtDescription.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(349, 74);
+            this.label2.Location = new System.Drawing.Point(111, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 30);
+            this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Title:";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI Semilight", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(285, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 30);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Upload a wallpaper";
             // 
             // ofdFileSelect
             // 
@@ -255,6 +251,18 @@ namespace YourPaper_Desktop
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(165, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Upload a wallpaper";
+            // 
             // Upload
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -288,12 +296,12 @@ namespace YourPaper_Desktop
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog ofdFileSelect;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnMinimise;
         private System.Windows.Forms.Button btnMaximise;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label1;
     }
 }
