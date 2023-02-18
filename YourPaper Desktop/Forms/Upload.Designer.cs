@@ -38,13 +38,13 @@ namespace YourPaper_Desktop
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.ofdFileSelect = new System.Windows.Forms.OpenFileDialog();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnMinimise = new System.Windows.Forms.Button();
             this.btnMaximise = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgImage)).BeginInit();
             this.pnlTop.SuspendLayout();
@@ -52,9 +52,7 @@ namespace YourPaper_Desktop
             // 
             // txtTitle
             // 
-            this.txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtTitle.Location = new System.Drawing.Point(171, 107);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
@@ -89,9 +87,9 @@ namespace YourPaper_Desktop
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(3, 427);
+            this.btnUpload.Location = new System.Drawing.Point(11, 427);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(752, 55);
+            this.btnUpload.Size = new System.Drawing.Size(736, 55);
             this.btnUpload.TabIndex = 7;
             this.btnUpload.Text = "Upload!";
             this.btnUpload.UseVisualStyleBackColor = true;
@@ -125,7 +123,8 @@ namespace YourPaper_Desktop
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -137,9 +136,7 @@ namespace YourPaper_Desktop
             // 
             // txtDescription
             // 
-            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtDescription.Location = new System.Drawing.Point(171, 165);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -148,7 +145,8 @@ namespace YourPaper_Desktop
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -157,6 +155,18 @@ namespace YourPaper_Desktop
             this.label2.Size = new System.Drawing.Size(51, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Title:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(165, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(236, 35);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Upload a wallpaper";
             // 
             // ofdFileSelect
             // 
@@ -250,18 +260,6 @@ namespace YourPaper_Desktop
             this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseHover);
             this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
             this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(165, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Upload a wallpaper";
             // 
             // Upload
             // 
