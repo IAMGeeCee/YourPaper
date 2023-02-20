@@ -15,7 +15,15 @@ namespace YourPaper_Desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Splash());
+
+            if (Settings.Default.IsFirstUse)
+            {
+                Application.Run(new Login());
+            }
+            else
+            {
+                Application.Run(new Splash());
+            }
         }
     }
 }

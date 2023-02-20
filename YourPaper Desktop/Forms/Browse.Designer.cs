@@ -39,13 +39,13 @@ namespace YourPaper_Desktop
             this.btnMaximise = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlBack = new System.Windows.Forms.Panel();
-            this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlImage = new System.Windows.Forms.Panel();
-            this.picImage = new System.Windows.Forms.PictureBox();
-            this.lblImgTitle = new System.Windows.Forms.Label();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.lblImgTitle = new System.Windows.Forms.Label();
+            this.picImage = new System.Windows.Forms.PictureBox();
+            this.flpWallpapers = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlTop.SuspendLayout();
             this.pnlBack.SuspendLayout();
             this.pnlImage.SuspendLayout();
@@ -200,18 +200,6 @@ namespace YourPaper_Desktop
             this.pnlBack.Size = new System.Drawing.Size(988, 560);
             this.pnlBack.TabIndex = 7;
             // 
-            // flpWallpapers
-            // 
-            this.flpWallpapers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpWallpapers.AutoScroll = true;
-            this.flpWallpapers.BackColor = System.Drawing.Color.Transparent;
-            this.flpWallpapers.Location = new System.Drawing.Point(4, 103);
-            this.flpWallpapers.Name = "flpWallpapers";
-            this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
-            this.flpWallpapers.TabIndex = 0;
-            // 
             // pnlImage
             // 
             this.pnlImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -228,37 +216,21 @@ namespace YourPaper_Desktop
             this.pnlImage.TabIndex = 1;
             this.pnlImage.Visible = false;
             // 
-            // picImage
+            // btnBack
             // 
-            this.picImage.BackColor = System.Drawing.Color.White;
-            this.picImage.Location = new System.Drawing.Point(12, 7);
-            this.picImage.Name = "picImage";
-            this.picImage.Size = new System.Drawing.Size(550, 300);
-            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImage.TabIndex = 0;
-            this.picImage.TabStop = false;
-            // 
-            // lblImgTitle
-            // 
-            this.lblImgTitle.AutoSize = true;
-            this.lblImgTitle.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImgTitle.ForeColor = System.Drawing.Color.White;
-            this.lblImgTitle.Location = new System.Drawing.Point(568, 7);
-            this.lblImgTitle.Name = "lblImgTitle";
-            this.lblImgTitle.Size = new System.Drawing.Size(210, 35);
-            this.lblImgTitle.TabIndex = 1;
-            this.lblImgTitle.Text = "[Image title here]";
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.ForeColor = System.Drawing.Color.White;
-            this.lblDescription.Location = new System.Drawing.Point(571, 53);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(103, 23);
-            this.lblDescription.TabIndex = 2;
-            this.lblDescription.Text = "[Description]";
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(942, 7);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(36, 35);
+            this.btnBack.TabIndex = 4;
+            this.btnBack.Text = "      Save";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnSave
             // 
@@ -277,21 +249,49 @@ namespace YourPaper_Desktop
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnBack
+            // lblDescription
             // 
-            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
-            this.btnBack.Location = new System.Drawing.Point(942, 7);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(36, 35);
-            this.btnBack.TabIndex = 4;
-            this.btnBack.Text = "      Save";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.lblDescription.AutoSize = true;
+            this.lblDescription.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.ForeColor = System.Drawing.Color.White;
+            this.lblDescription.Location = new System.Drawing.Point(571, 53);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(103, 23);
+            this.lblDescription.TabIndex = 2;
+            this.lblDescription.Text = "[Description]";
+            // 
+            // lblImgTitle
+            // 
+            this.lblImgTitle.AutoSize = true;
+            this.lblImgTitle.Font = new System.Drawing.Font("Bahnschrift SemiBold SemiConden", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblImgTitle.ForeColor = System.Drawing.Color.White;
+            this.lblImgTitle.Location = new System.Drawing.Point(568, 7);
+            this.lblImgTitle.Name = "lblImgTitle";
+            this.lblImgTitle.Size = new System.Drawing.Size(210, 35);
+            this.lblImgTitle.TabIndex = 1;
+            this.lblImgTitle.Text = "[Image title here]";
+            // 
+            // picImage
+            // 
+            this.picImage.BackColor = System.Drawing.Color.White;
+            this.picImage.Location = new System.Drawing.Point(11, 6);
+            this.picImage.Name = "picImage";
+            this.picImage.Size = new System.Drawing.Size(550, 300);
+            this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picImage.TabIndex = 0;
+            this.picImage.TabStop = false;
+            // 
+            // flpWallpapers
+            // 
+            this.flpWallpapers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpWallpapers.AutoScroll = true;
+            this.flpWallpapers.BackColor = System.Drawing.Color.Transparent;
+            this.flpWallpapers.Location = new System.Drawing.Point(4, 103);
+            this.flpWallpapers.Name = "flpWallpapers";
+            this.flpWallpapers.Size = new System.Drawing.Size(971, 444);
+            this.flpWallpapers.TabIndex = 0;
             // 
             // Browse
             // 
