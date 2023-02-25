@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using YourPaper_Desktop.Properties;
 
 namespace YourPaper_Desktop
 {
@@ -51,8 +50,9 @@ namespace YourPaper_Desktop
                 int NumOfCorrect = Convert.ToInt32(SelectCommand.ExecuteScalar().ToString());//Count Correct Users
                 if (NumOfCorrect == 1)
                 {
-                    Settings.Default.IsFirstUse = false;
-                    Settings.Default.Email = txtEmail.Text;
+                    UserSettings.Default.IsFirstUse = false;
+                    UserSettings.Default.Email = txtEmail.Text;
+                    UserSettings.Default.Save();
                     (new Splash()).Show();
                     Hide();
                 }

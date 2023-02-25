@@ -97,6 +97,11 @@
     <Compile Include="Forms\Upload.Designer.cs">
       <DependentUpon>Upload.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>UserSettings.settings</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\Browse.resx">
       <DependentUpon>Browse.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +135,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="UserSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UserSettings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

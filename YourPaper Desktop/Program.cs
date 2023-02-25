@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
-using YourPaper_Desktop.Properties;
 
 namespace YourPaper_Desktop
 {
@@ -16,7 +15,7 @@ namespace YourPaper_Desktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (Settings.Default.IsFirstUse)
+            if (UserSettings.Default.IsFirstUse)
             {
                 Application.Run(new Login());
             }
