@@ -199,7 +199,7 @@ namespace YourPaper_Desktop
                 SqlCommand GetNumOfRows = new SqlCommand("SELECT COUNT(*) FROM Wallpapers;", connection);
                 int intNumOfRows = (int)GetNumOfRows.ExecuteScalar();
 
-                for (int i = 1; i < intNumOfRows; i++)
+                for (int i = 1; i <= intNumOfRows; i++)
                 {
                     //Checks if it has the search query in the title
                     SqlCommand SearchCommand = new SqlCommand("Select Title From Wallpapers Where ID='" + i + "';", connection);
